@@ -11,6 +11,11 @@ class ForintFlipper extends StatefulWidget {
   State<StatefulWidget> createState() => _ForintFlipperState();
 }
 
+var kColorScheme = ColorScheme.fromSeed(seedColor: Colors.blue);
+
+var kDarkColorScheme =
+    ColorScheme.fromSeed(brightness: Brightness.dark, seedColor: Colors.blue);
+
 class _ForintFlipperState extends State<ForintFlipper> {
   String currentImage = possibleImages[1];
 
@@ -23,8 +28,11 @@ class _ForintFlipperState extends State<ForintFlipper> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+      theme: ThemeData().copyWith(
+        colorScheme: kColorScheme,
+      ),
+      darkTheme: ThemeData.dark().copyWith(
+        colorScheme: kDarkColorScheme,
       ),
       home: Scaffold(
         body: Center(
