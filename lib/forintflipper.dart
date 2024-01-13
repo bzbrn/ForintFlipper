@@ -22,13 +22,9 @@ class _ForintFlipperState extends State<ForintFlipper> {
 
   @override
   Widget build(BuildContext context) {
-    // final isDarkMode =
-    //     MediaQuery.of(context).platformBrightness == Brightness.dark;
-
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        // brightness: isDarkMode ? Brightness.dark : Brightness.light,
       ),
       home: Scaffold(
         body: Center(
