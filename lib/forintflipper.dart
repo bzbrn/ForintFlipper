@@ -1,3 +1,4 @@
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -27,31 +28,34 @@ class _ForintFlipperState extends State<ForintFlipper> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData().copyWith(
-        colorScheme: kColorScheme,
-      ),
-      darkTheme: ThemeData.dark().copyWith(
-        colorScheme: kDarkColorScheme,
-      ),
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                currentImage,
-                width: 300,
-              ),
-              const SizedBox(height: 48),
-              ElevatedButton(
-                onPressed: _flipper,
-                child: const Text('Flip Coin'),
-              )
-            ],
+    return DynamicColorBuilder(
+        builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
+      return MaterialApp(
+        theme: ThemeData().copyWith(
+          colorScheme: lightDynamic,
+        ),
+        darkTheme: ThemeData.dark().copyWith(
+          colorScheme: darkDynamic,
+        ),
+        home: Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  currentImage,
+                  width: 300,
+                ),
+                const SizedBox(height: 48),
+                ElevatedButton(
+                  onPressed: _flipper,
+                  child: const Text('Flip Coin'),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
