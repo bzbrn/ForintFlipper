@@ -52,10 +52,16 @@ class _ForintFlipperState extends State<ForintFlipper> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  currentImage,
-                  width: deviceWidth * 2 / 3,
-                ),
+                if (deviceWidth < 600)
+                  Image.asset(
+                    currentImage,
+                    width: deviceWidth * 2 / 3,
+                  )
+                else
+                  Image.asset(
+                    currentImage,
+                    width: 400,
+                  ),
                 const SizedBox(height: 48),
                 ElevatedButton(
                   onPressed: _flipper,
