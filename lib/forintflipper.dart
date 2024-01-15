@@ -28,6 +28,8 @@ class _ForintFlipperState extends State<ForintFlipper> {
 
   @override
   Widget build(BuildContext context) {
+    final deviceWidth = MediaQuery.of(context).size.width;
+
     return DynamicColorBuilder(
         builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
       return MaterialApp(
@@ -44,7 +46,7 @@ class _ForintFlipperState extends State<ForintFlipper> {
               children: [
                 Image.asset(
                   currentImage,
-                  width: 300,
+                  width: deviceWidth * 2 / 3,
                 ),
                 const SizedBox(height: 48),
                 ElevatedButton(
