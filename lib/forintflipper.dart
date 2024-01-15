@@ -24,6 +24,14 @@ class _ForintFlipperState extends State<ForintFlipper> {
     setState(() {
       currentImage = possibleImages[randomizer.nextInt(2)];
     });
+
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(currentImage == 'assets/heads.png' ? 'Heads!' : 'Tails!'),
+        duration: const Duration(seconds: 1),
+      ),
+    );
   }
 
   @override

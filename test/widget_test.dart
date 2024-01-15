@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:forintflipper/main.dart';
 import 'package:forintflipper/forintflipper.dart';
 
 void main() {
