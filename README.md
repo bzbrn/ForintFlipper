@@ -7,7 +7,7 @@ A very simple and minimalistic coin flipper app written in Flutter. It differs f
 ## Installation
 
 The app is only available for Android and Windows (yet).  
-Download the apk from the [Releases](https://github.com/bzbrn/ForintFlipper/releases) tab.
+Download the suitable file (apk for Android or exe for Windows) from the [Releases](https://github.com/bzbrn/ForintFlipper/releases) tab.
 
 ## Setup
 
