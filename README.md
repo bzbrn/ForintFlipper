@@ -10,7 +10,7 @@ Download and run the .apk file from the [Releases](https://github.com/bzbrn/Fori
 
 ## Installation for Windows
  
-Download the and extract the .zip file from the [Releases](https://github.com/bzbrn/ForintFlipper/releases) tab. Run the `ForintFlipper_<version>.exe` file.
+Download the and extract the `ForintFlipper_Windows_<version>.zip` file from the [Releases](https://github.com/bzbrn/ForintFlipper/releases) tab. Run the `ForintFlipper_<version>.exe` file.
 
 ## Setup
 
