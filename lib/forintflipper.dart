@@ -55,7 +55,7 @@ class _ForintFlipperState extends State<ForintFlipper> {
                 if (deviceWidth < 600)
                   Image.asset(
                     currentImage,
-                    width: deviceWidth * 2 / 3,
+                    width: deviceWidth * 3 / 4,
                   )
                 else
                   Image.asset(
