@@ -21,3 +21,5 @@ void main() {
     runApp(const MyApp());
   });
 }
+
+// gittel való baszakodós komment
